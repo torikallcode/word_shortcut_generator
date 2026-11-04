@@ -1,0 +1,44 @@
+[
+  {
+    "combo": { "modifiers": ["ctrl"], "key": "KeyB" },
+    "target": { "kind": "command", "wordName": "Bold" },
+    "name": { "id": "Tebal", "en": "Bold" },
+    "platforms": ["win"]
+  },
+  {
+    "combo": { "modifiers": ["ctrl"], "key": "KeyI" },
+    "target": { "kind": "command", "wordName": "Italic" },
+    "name": { "id": "Miring", "en": "Italic" },
+    "platforms": ["win"]
+  },
+  {
+    "combo": { "modifiers": ["ctrl"], "key": "KeyU" },
+    "target": { "kind": "command", "wordName": "Underline" },
+    "name": { "id": "Garis bawah", "en": "Underline" },
+    "platforms": ["win"]
+  },
+  {
+    "combo": { "modifiers": ["ctrl"], "key": "KeyK" },
+    "target": { "kind": "command", "wordName": "InsertHyperlink" },
+    "name": { "id": "Sisipkan hyperlink", "en": "Insert hyperlink" },
+    "platforms": ["win"]
+  },
+  {
+    "combo": { "modifiers": ["ctrl", "alt"], "key": "Digit1" },
+    "target": { "kind": "style", "wordName": "heading 1" },
+    "name": { "id": "Judul 1", "en": "Heading 1" },
+    "platforms": ["win"]
+  },
+  {
+    "combo": { "modifiers": ["ctrl", "alt"], "key": "Digit2" },
+    "target": { "kind": "style", "wordName": "heading 2" },
+    "name": { "id": "Judul 2", "en": "Heading 2" },
+    "platforms": ["win"]
+  },
+  {
+    "combo": { "modifiers": ["ctrl", "alt"], "key": "Digit3" },
+    "target": { "kind": "style", "wordName": "heading 3" },
+    "name": { "id": "Judul 3", "en": "Heading 3" },
+    "platforms": ["win"]
+  }
+]

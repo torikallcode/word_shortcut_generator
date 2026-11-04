@@ -1,0 +1,233 @@
+{
+  "app": {
+    "title": "Word Shortcut Builder",
+    "tagline": "Custom Word keyboard shortcuts, ready in one file.",
+    "nav": {
+      "home": "Home",
+      "editor": "Editor",
+      "summary": "Summary",
+      "guide": "Guide"
+    }
+  },
+  "language": {
+    "label": "Language",
+    "id": "Indonesian",
+    "en": "English"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "save": "Save",
+    "remove": "Remove",
+    "edit": "Edit",
+    "close": "Close",
+    "copy": "Copy",
+    "copied": "Copied",
+    "back": "Back",
+    "next": "Next",
+    "download": "Download",
+    "load": "Load",
+    "search": "Search",
+    "clear": "Clear",
+    "add": "Add",
+    "apply": "Apply",
+    "optional": "optional",
+    "notAvailable": "Not available yet"
+  },
+  "platform": {
+    "label": "Platform",
+    "win": "Windows",
+    "mac": "macOS"
+  },
+  "categories": {
+    "formatting": "Formatting",
+    "paragraph": "Paragraph",
+    "review": "Review",
+    "table": "Table",
+    "insert": "Insert",
+    "editing": "Editing",
+    "styles": "Styles",
+    "references": "References",
+    "view": "View"
+  },
+  "home": {
+    "badge": "Runs entirely in your browser",
+    "title": "Build a Normal.dotm with your own Word shortcuts",
+    "subtitle": "Pick commands, press a key combination, and download a ready-to-use template. No server, no account, no macro.",
+    "startEmptyTitle": "Start from scratch",
+    "startEmptyBody": "Open the editor with an empty shortcut list.",
+    "startEmptyAction": "Start empty",
+    "presetTitle": "Use a preset",
+    "presetBody": "Start from a curated set for academic, publishing, or legal work.",
+    "presetAction": "Apply preset",
+    "presetEmpty": "This preset has no shortcuts yet. Preset data is filled from the T4 command catalog.",
+    "loadTitle": "Load a configuration",
+    "loadBody": "Continue from a JSON file you saved earlier.",
+    "loadAction": "Load JSON",
+    "loadError": "That file could not be read as a shortcut configuration.",
+    "loadMissing": "{{count}} shortcut(s) reference commands that are not in the catalog and were skipped.",
+    "privacyTitle": "Your files never leave this device",
+    "privacyBody": "Everything is generated in your browser. No configuration or document is uploaded.",
+    "scopeTitle": "Works with Word desktop",
+    "scopeBody": "Windows and macOS, Word 2016, 2019, 2021, and Microsoft 365. Word for the web and mobile are not supported."
+  },
+  "editor": {
+    "title": "Shortcut editor",
+    "subtitle": "Choose a command, then press the keys you want to use.",
+    "catalogTitle": "Command catalog",
+    "catalogSearch": "Search commands",
+    "catalogCategory": "Category",
+    "catalogAll": "All categories",
+    "catalogEmptyTitle": "The catalog is not loaded",
+    "catalogEmptyBody": "Command and Style names must come from the real Word fixtures (task T0) so the generated file opens without repair. Add fixtures and rebuild to populate the catalog.",
+    "tabs": {
+      "commands": "Commands",
+      "styles": "Styles"
+    },
+    "bindingsTitle": "Your shortcuts",
+    "bindingsCount": "{{count}} shortcut(s)",
+    "bindingsEmptyTitle": "No shortcuts yet",
+    "bindingsEmptyBody": "Pick a command from the catalog to assign a key combination.",
+    "bindingRemove": "Remove shortcut for {{name}}",
+    "bindingEdit": "Edit shortcut for {{name}}",
+    "bindingAssigned": "Assigned",
+    "bindingUnassigned": "Set shortcut",
+    "previewTitle": "Keyboard preview",
+    "previewBody": "Keys used by your current shortcuts are highlighted.",
+    "previewUsed": "Used keys",
+    "saveConfig": "Save configuration",
+    "review": "Review and download",
+    "clearAll": "Remove all shortcuts",
+    "clearAllConfirm": "Remove every shortcut from this configuration?",
+    "platformHint": "Changing the platform keeps your shortcuts but resets conflict decisions."
+  },
+  "shortcut": {
+    "dialogTitleAdd": "Assign a shortcut",
+    "dialogTitleEdit": "Edit shortcut",
+    "targetLabel": "Command",
+    "captureTitle": "Press the key combination",
+    "captureHint": "Click the box and press your keys. Press Esc to cancel.",
+    "captureWaiting": "Waiting for keys…",
+    "captured": "Captured",
+    "orManual": "Or choose the keys manually",
+    "manualModifiers": "Modifiers",
+    "manualKey": "Key",
+    "manualKeyPlaceholder": "Choose a key",
+    "invalidNoKey": "Choose at least one non-modifier key.",
+    "invalidCmdOnWindows": "Command/Cmd cannot be used on Windows. Use Ctrl instead.",
+    "invalidKey": "This key has no verified Word key code yet. Choose another key.",
+    "modifiers": {
+      "ctrl": "Ctrl",
+      "alt": "Alt",
+      "shift": "Shift",
+      "cmd": "Cmd"
+    }
+  },
+  "conflicts": {
+    "duplicateTitle": "This combination is already used",
+    "duplicateBody": "It is assigned to another shortcut in your list. Choose a different combination or remove the other shortcut first.",
+    "defaultTitle": "This combination belongs to Word",
+    "defaultBody": "Word already uses {{combo}} for “{{name}}”. You can overwrite it or choose another combination.",
+    "browserTitle": "Your browser uses this combination",
+    "browserBody": "The browser may not let the editor capture {{combo}}. You can still enter it manually below.",
+    "overwrite": "Overwrite",
+    "change": "Choose another",
+    "overwritten": "Overwritten",
+    "invalidPlatformTitle": "Shortcut not valid on this platform",
+    "invalidPlatformBody": "Command/Cmd is only available on macOS. Change this shortcut to use Ctrl, or switch the platform back to macOS.",
+    "summaryTitle": "Conflicts to resolve",
+    "summaryBody": "Resolve these conflicts before downloading the template."
+  },
+  "summary": {
+    "title": "Review and download",
+    "subtitle": "Check your shortcuts, then download the template file.",
+    "count": "Shortcuts",
+    "platform": "Platform",
+    "target": "Command or style",
+    "shortcut": "Shortcut",
+    "type": "Type",
+    "typeCommand": "Command",
+    "typeStyle": "Style",
+    "warningTitle": "This replaces your current Normal.dotm",
+    "warningBody": "Installing this file replaces the existing Normal.dotm on that computer. Custom styles, AutoText, and macros in the old file will be lost. Back up the old file first — the installation guide explains how.",
+    "download": "Download Normal.dotm",
+    "generating": "Generating…",
+    "saveJson": "Save configuration",
+    "backToEditor": "Back to editor",
+    "emptyTitle": "Nothing to download yet",
+    "emptyBody": "Add at least one shortcut in the editor first.",
+    "unresolvedTitle": "Unresolved conflicts",
+    "unresolvedBody": "Go back to the editor and resolve the highlighted conflicts.",
+    "missingTargets": "These shortcuts were skipped because their commands are missing from the catalog: {{list}}",
+    "fixturesPendingTitle": "File generation is waiting for Word fixtures",
+    "fixturesPendingBody": "The PRD requires the OOXML parts and internal Word names to be transcribed from real Normal.dotm fixtures (task T0). Until that folder is populated, the site will not guess them. You can still save your configuration as JSON.",
+    "macPendingTitle": "macOS generation needs a Mac fixture",
+    "macPendingBody": "Shortcuts are verified against the Windows Word 2021 fixture. Command-key encoding on macOS must come from a real Mac Normal.dotm before the site can generate Mac files. You can still configure shortcuts and save the JSON on this platform."
+  },
+  "guide": {
+    "title": "Installation guide",
+    "subtitle": "Follow the steps for your operating system. Close Word before copying the file.",
+    "tabs": {
+      "win": "Windows",
+      "mac": "macOS"
+    },
+    "folderTitle": "Templates folder",
+    "folderWindows": "%AppData%\\Microsoft\\Templates",
+    "folderMac": "~/Library/Group Containers/UBF8T346G9.Office/User Content/Templates",
+    "copyFolder": "Copy folder path",
+    "folderProvisional": "Verify this path against the T0 human test before publishing.",
+    "stepsTitle": "Step by step",
+    "steps": {
+      "backup": {
+        "title": "Back up the old Normal.dotm",
+        "body": "Open the Templates folder, rename the existing Normal.dotm to Normal.backup.dotm, or copy it somewhere safe."
+      },
+      "close": {
+        "title": "Close Word completely",
+        "body": "Word keeps the template open in the background. Quit Word, including any documents that are still open."
+      },
+      "copy": {
+        "title": "Copy the downloaded file",
+        "body": "Download Normal.dotm from the summary page, then move it into the Templates folder."
+      },
+      "paste": {
+        "title": "Replace the old file",
+        "body": "Confirm the replacement when your system asks. The file must be named exactly Normal.dotm."
+      },
+      "restart": {
+        "title": "Open Word and test",
+        "body": "Start Word and try one of your shortcuts. If it does not work, check the troubleshooting section below."
+      }
+    },
+    "unblockTitle": "Unblock the downloaded file (Windows)",
+    "unblockBody": "Windows may mark downloaded files as unsafe. Right-click Normal.dotm, choose Properties, tick Unblock at the bottom, and click OK. On macOS, remove the quarantine flag if Word refuses to load the file.",
+    "troubleTitle": "Troubleshooting",
+    "troubleItems": {
+      "blocked": "The shortcut does nothing: check that the file is unblocked and that its name is exactly Normal.dotm.",
+      "wordOpen": "Word was running during installation: quit Word completely and copy the file again.",
+      "otherCopy": "Another copy wins: search the computer for other Normal.dotm files and keep only the one in the Templates folder.",
+      "onedrive": "A cloud-synced or redirected profile may use a different Templates folder. Open File > Options > Advanced > File Locations to see the real path.",
+      "macPath": "On macOS the Templates folder differs between Word versions. Use Word > Preferences > File Locations to confirm it."
+    },
+    "warningTitle": "Keep a backup",
+    "warningBody": "Replacing Normal.dotm resets custom styles, AutoText, and macros stored in it. Always keep the backup until you have tested the new file."
+  },
+  "errors": {
+    "unknownVersion": "This configuration was made by a newer version of the site. Its version is not supported.",
+    "invalidConfig": "This file is not a valid shortcut configuration.",
+    "invalidJson": "This file is not valid JSON.",
+    "fixturesRequired": "File generation is not available until the Word fixtures are installed.",
+    "unresolved": "Resolve the remaining conflicts before generating the file.",
+    "generationFailed": "The file could not be generated. Your configuration is still intact.",
+    "fileRead": "The file could not be read.",
+    "missingTargets": "Some shortcuts reference commands that are not in the catalog."
+  },
+  "keyboard": {
+    "legend": "Highlighted keys are used by at least one shortcut.",
+    "used": "Used",
+    "unused": "Unused"
+  },
+  "footer": {
+    "privacy": "All processing stays in your browser.",
+    "noServer": "No uploads. No account. No macros."
+  }
+}

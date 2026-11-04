@@ -1,0 +1,32 @@
+[
+  {
+    "id": "bold",
+    "wordName": "Bold",
+    "category": "formatting",
+    "name": { "id": "Tebal", "en": "Bold" },
+    "description": { "id": "Tebalkan teks terpilih.", "en": "Make the selected text bold." },
+    "platforms": ["win", "mac"]
+  },
+  {
+    "id": "insert-hyperlink",
+    "wordName": "InsertHyperlink",
+    "category": "insert",
+    "name": { "id": "Sisipkan hyperlink", "en": "Insert hyperlink" },
+    "description": {
+      "id": "Tambahkan tautan pada teks terpilih.",
+      "en": "Add a link to the selected text."
+    },
+    "platforms": ["win", "mac"]
+  },
+  {
+    "id": "insert-table",
+    "wordName": "TableInsertTable",
+    "category": "table",
+    "name": { "id": "Sisipkan tabel", "en": "Insert table" },
+    "description": {
+      "id": "Sisipkan tabel baru di posisi kursor.",
+      "en": "Insert a new table at the cursor."
+    },
+    "platforms": ["win", "mac"]
+  }
+]

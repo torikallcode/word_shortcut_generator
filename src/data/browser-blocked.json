@@ -1,0 +1,62 @@
+[
+  {
+    "combo": { "modifiers": ["ctrl"], "key": "KeyW" },
+    "platforms": ["win"]
+  },
+  {
+    "combo": { "modifiers": ["ctrl"], "key": "KeyT" },
+    "platforms": ["win"]
+  },
+  {
+    "combo": { "modifiers": ["ctrl"], "key": "KeyN" },
+    "platforms": ["win"]
+  },
+  {
+    "combo": { "modifiers": ["ctrl"], "key": "KeyR" },
+    "platforms": ["win"]
+  },
+  {
+    "combo": { "modifiers": ["ctrl"], "key": "KeyL" },
+    "platforms": ["win"]
+  },
+  {
+    "combo": { "modifiers": ["ctrl"], "key": "KeyD" },
+    "platforms": ["win"]
+  },
+  {
+    "combo": { "modifiers": ["ctrl"], "key": "Tab" },
+    "platforms": ["win"]
+  },
+  {
+    "combo": { "modifiers": ["ctrl", "shift"], "key": "Tab" },
+    "platforms": ["win"]
+  },
+  {
+    "combo": { "modifiers": ["cmd"], "key": "KeyQ" },
+    "platforms": ["mac"]
+  },
+  {
+    "combo": { "modifiers": ["cmd"], "key": "KeyW" },
+    "platforms": ["mac"]
+  },
+  {
+    "combo": { "modifiers": ["cmd"], "key": "KeyT" },
+    "platforms": ["mac"]
+  },
+  {
+    "combo": { "modifiers": ["cmd"], "key": "KeyN" },
+    "platforms": ["mac"]
+  },
+  {
+    "combo": { "modifiers": ["cmd"], "key": "KeyR" },
+    "platforms": ["mac"]
+  },
+  {
+    "combo": { "modifiers": ["cmd"], "key": "KeyL" },
+    "platforms": ["mac"]
+  },
+  {
+    "combo": { "modifiers": ["cmd"], "key": "Tab" },
+    "platforms": ["mac"]
+  }
+]

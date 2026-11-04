@@ -1,0 +1,92 @@
+[
+  {
+    "id": "normal",
+    "wordName": "Normal",
+    "name": { "id": "Normal", "en": "Normal" },
+    "platforms": ["win", "mac"]
+  },
+  {
+    "id": "heading-1",
+    "wordName": "heading 1",
+    "name": { "id": "Judul 1", "en": "Heading 1" },
+    "platforms": ["win", "mac"]
+  },
+  {
+    "id": "heading-2",
+    "wordName": "heading 2",
+    "name": { "id": "Judul 2", "en": "Heading 2" },
+    "platforms": ["win", "mac"]
+  },
+  {
+    "id": "heading-3",
+    "wordName": "heading 3",
+    "name": { "id": "Judul 3", "en": "Heading 3" },
+    "platforms": ["win", "mac"]
+  },
+  {
+    "id": "heading-4",
+    "wordName": "heading 4",
+    "name": { "id": "Judul 4", "en": "Heading 4" },
+    "platforms": ["win", "mac"]
+  },
+  {
+    "id": "heading-5",
+    "wordName": "heading 5",
+    "name": { "id": "Judul 5", "en": "Heading 5" },
+    "platforms": ["win", "mac"]
+  },
+  {
+    "id": "heading-6",
+    "wordName": "heading 6",
+    "name": { "id": "Judul 6", "en": "Heading 6" },
+    "platforms": ["win", "mac"]
+  },
+  {
+    "id": "heading-7",
+    "wordName": "heading 7",
+    "name": { "id": "Judul 7", "en": "Heading 7" },
+    "platforms": ["win", "mac"]
+  },
+  {
+    "id": "heading-8",
+    "wordName": "heading 8",
+    "name": { "id": "Judul 8", "en": "Heading 8" },
+    "platforms": ["win", "mac"]
+  },
+  {
+    "id": "heading-9",
+    "wordName": "heading 9",
+    "name": { "id": "Judul 9", "en": "Heading 9" },
+    "platforms": ["win", "mac"]
+  },
+  {
+    "id": "title",
+    "wordName": "Title",
+    "name": { "id": "Judul dokumen", "en": "Title" },
+    "platforms": ["win", "mac"]
+  },
+  {
+    "id": "subtitle",
+    "wordName": "Subtitle",
+    "name": { "id": "Subjudul", "en": "Subtitle" },
+    "platforms": ["win", "mac"]
+  },
+  {
+    "id": "quote",
+    "wordName": "Quote",
+    "name": { "id": "Kutipan", "en": "Quote" },
+    "platforms": ["win", "mac"]
+  },
+  {
+    "id": "caption",
+    "wordName": "caption",
+    "name": { "id": "Keterangan", "en": "Caption" },
+    "platforms": ["win", "mac"]
+  },
+  {
+    "id": "list-paragraph",
+    "wordName": "List Paragraph",
+    "name": { "id": "Paragraf daftar", "en": "List Paragraph" },
+    "platforms": ["win", "mac"]
+  }
+]

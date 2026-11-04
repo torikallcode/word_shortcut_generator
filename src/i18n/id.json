@@ -1,0 +1,233 @@
+{
+  "app": {
+    "title": "Word Shortcut Builder",
+    "tagline": "Shortcut keyboard Word kustom, siap dalam satu file.",
+    "nav": {
+      "home": "Beranda",
+      "editor": "Editor",
+      "summary": "Ringkasan",
+      "guide": "Panduan"
+    }
+  },
+  "language": {
+    "label": "Bahasa",
+    "id": "Indonesia",
+    "en": "Inggris"
+  },
+  "common": {
+    "cancel": "Batal",
+    "save": "Simpan",
+    "remove": "Hapus",
+    "edit": "Ubah",
+    "close": "Tutup",
+    "copy": "Salin",
+    "copied": "Tersalin",
+    "back": "Kembali",
+    "next": "Lanjut",
+    "download": "Unduh",
+    "load": "Muat",
+    "search": "Cari",
+    "clear": "Bersihkan",
+    "add": "Tambah",
+    "apply": "Terapkan",
+    "optional": "opsional",
+    "notAvailable": "Belum tersedia"
+  },
+  "platform": {
+    "label": "Platform",
+    "win": "Windows",
+    "mac": "macOS"
+  },
+  "categories": {
+    "formatting": "Format",
+    "paragraph": "Paragraf",
+    "review": "Review",
+    "table": "Tabel",
+    "insert": "Sisipkan",
+    "editing": "Penyuntingan",
+    "styles": "Style",
+    "references": "Referensi",
+    "view": "Tampilan"
+  },
+  "home": {
+    "badge": "Seluruh proses berjalan di browser Anda",
+    "title": "Buat Normal.dotm dengan shortcut Word versi Anda",
+    "subtitle": "Pilih perintah, tekan kombinasi tombol, lalu unduh template yang siap dipakai. Tanpa server, tanpa akun, tanpa macro.",
+    "startEmptyTitle": "Mulai dari kosong",
+    "startEmptyBody": "Buka editor dengan daftar shortcut kosong.",
+    "startEmptyAction": "Mulai kosong",
+    "presetTitle": "Pakai preset",
+    "presetBody": "Mulai dari kumpulan siap pakai untuk penulisan akademik, penerbitan, atau dokumen hukum.",
+    "presetAction": "Terapkan preset",
+    "presetEmpty": "Preset ini belum berisi shortcut. Data preset diisi dari katalog perintah T4.",
+    "loadTitle": "Muat konfigurasi",
+    "loadBody": "Lanjutkan dari file JSON yang Anda simpan sebelumnya.",
+    "loadAction": "Muat JSON",
+    "loadError": "File tersebut tidak dapat dibaca sebagai konfigurasi shortcut.",
+    "loadMissing": "{{count}} shortcut merujuk perintah yang tidak ada di katalog dan dilewati.",
+    "privacyTitle": "File Anda tidak pernah keluar dari perangkat ini",
+    "privacyBody": "Semua dibuat di browser Anda. Tidak ada konfigurasi atau dokumen yang diunggah.",
+    "scopeTitle": "Untuk Word desktop",
+    "scopeBody": "Windows dan macOS, Word 2016, 2019, 2021, dan Microsoft 365. Word untuk web dan mobile tidak didukung."
+  },
+  "editor": {
+    "title": "Editor shortcut",
+    "subtitle": "Pilih perintah, lalu tekan tombol yang ingin dipakai.",
+    "catalogTitle": "Katalog perintah",
+    "catalogSearch": "Cari perintah",
+    "catalogCategory": "Kategori",
+    "catalogAll": "Semua kategori",
+    "catalogEmptyTitle": "Katalog belum dimuat",
+    "catalogEmptyBody": "Nama perintah dan Style harus berasal dari fixture Word asli (tugas T0) agar file yang dihasilkan terbuka tanpa perbaikan. Tambahkan fixture lalu build ulang untuk mengisi katalog.",
+    "tabs": {
+      "commands": "Perintah",
+      "styles": "Style"
+    },
+    "bindingsTitle": "Shortcut Anda",
+    "bindingsCount": "{{count}} shortcut",
+    "bindingsEmptyTitle": "Belum ada shortcut",
+    "bindingsEmptyBody": "Pilih perintah dari katalog untuk menetapkan kombinasi tombol.",
+    "bindingRemove": "Hapus shortcut untuk {{name}}",
+    "bindingEdit": "Ubah shortcut untuk {{name}}",
+    "bindingAssigned": "Sudah diatur",
+    "bindingUnassigned": "Atur shortcut",
+    "previewTitle": "Pratinjau keyboard",
+    "previewBody": "Tombol yang dipakai shortcut Anda disorot.",
+    "previewUsed": "Tombol terpakai",
+    "saveConfig": "Simpan konfigurasi",
+    "review": "Tinjau dan unduh",
+    "clearAll": "Hapus semua shortcut",
+    "clearAllConfirm": "Hapus semua shortcut dari konfigurasi ini?",
+    "platformHint": "Mengubah platform mempertahankan shortcut tetapi mengatur ulang keputusan konflik."
+  },
+  "shortcut": {
+    "dialogTitleAdd": "Tetapkan shortcut",
+    "dialogTitleEdit": "Ubah shortcut",
+    "targetLabel": "Perintah",
+    "captureTitle": "Tekan kombinasi tombol",
+    "captureHint": "Klik kotak lalu tekan tombol Anda. Tekan Esc untuk membatalkan.",
+    "captureWaiting": "Menunggu tombol…",
+    "captured": "Tertangkap",
+    "orManual": "Atau pilih tombol secara manual",
+    "manualModifiers": "Modifier",
+    "manualKey": "Tombol",
+    "manualKeyPlaceholder": "Pilih tombol",
+    "invalidNoKey": "Pilih setidaknya satu tombol selain modifier.",
+    "invalidCmdOnWindows": "Command/Cmd tidak dapat dipakai di Windows. Gunakan Ctrl.",
+    "invalidKey": "Tombol ini belum memiliki kode tombol Word yang terverifikasi. Pilih tombol lain.",
+    "modifiers": {
+      "ctrl": "Ctrl",
+      "alt": "Alt",
+      "shift": "Shift",
+      "cmd": "Cmd"
+    }
+  },
+  "conflicts": {
+    "duplicateTitle": "Kombinasi ini sudah dipakai",
+    "duplicateBody": "Kombinasi ini dipakai shortcut lain di daftar Anda. Pilih kombinasi lain atau hapus shortcut tersebut lebih dulu.",
+    "defaultTitle": "Kombinasi ini milik Word",
+    "defaultBody": "Word sudah memakai {{combo}} untuk “{{name}}”. Anda dapat menimpanya atau memilih kombinasi lain.",
+    "browserTitle": "Browser memakai kombinasi ini",
+    "browserBody": "Browser mungkin tidak mengizinkan editor menangkap {{combo}}. Anda tetap dapat memasukkannya secara manual di bawah.",
+    "overwrite": "Timpa",
+    "change": "Ganti",
+    "overwritten": "Ditimpa",
+    "invalidPlatformTitle": "Shortcut tidak valid di platform ini",
+    "invalidPlatformBody": "Command/Cmd hanya tersedia di macOS. Ubah shortcut ini agar memakai Ctrl, atau kembalikan platform ke macOS.",
+    "summaryTitle": "Konflik yang harus diselesaikan",
+    "summaryBody": "Selesaikan konflik ini sebelum mengunduh template."
+  },
+  "summary": {
+    "title": "Tinjau dan unduh",
+    "subtitle": "Periksa shortcut Anda, lalu unduh file template.",
+    "count": "Shortcut",
+    "platform": "Platform",
+    "target": "Perintah atau style",
+    "shortcut": "Shortcut",
+    "type": "Jenis",
+    "typeCommand": "Perintah",
+    "typeStyle": "Style",
+    "warningTitle": "File ini menggantikan Normal.dotm Anda saat ini",
+    "warningBody": "Memasang file ini menggantikan Normal.dotm yang ada di komputer tersebut. Style kustom, AutoText, dan macro di file lama akan hilang. Cadangkan file lama lebih dulu — panduan pemasangan menjelaskan caranya.",
+    "download": "Unduh Normal.dotm",
+    "generating": "Membuat file…",
+    "saveJson": "Simpan konfigurasi",
+    "backToEditor": "Kembali ke editor",
+    "emptyTitle": "Belum ada yang bisa diunduh",
+    "emptyBody": "Tambahkan setidaknya satu shortcut di editor terlebih dahulu.",
+    "unresolvedTitle": "Konflik belum selesai",
+    "unresolvedBody": "Kembali ke editor dan selesaikan konflik yang ditandai.",
+    "missingTargets": "Shortcut berikut dilewati karena perintahnya tidak ada di katalog: {{list}}",
+    "fixturesPendingTitle": "Pembuatan file menunggu fixture Word",
+    "fixturesPendingBody": "PRD mewajibkan bagian OOXML dan nama internal Word disalin dari fixture Normal.dotm asli (tugas T0). Sampai folder itu diisi, situs tidak akan menebaknya. Anda tetap dapat menyimpan konfigurasi sebagai JSON.",
+    "macPendingTitle": "Pembuatan file macOS menunggu fixture Mac",
+    "macPendingBody": "Shortcut diverifikasi terhadap fixture Windows Word 2021. Encoding tombol Command di macOS harus disalin dari Normal.dotm Mac asli sebelum situs dapat membuat file Mac. Anda tetap dapat mengatur shortcut dan menyimpan JSON di platform ini."
+  },
+  "guide": {
+    "title": "Panduan pemasangan",
+    "subtitle": "Ikuti langkah sesuai sistem operasi Anda. Tutup Word sebelum menyalin file.",
+    "tabs": {
+      "win": "Windows",
+      "mac": "macOS"
+    },
+    "folderTitle": "Folder Templates",
+    "folderWindows": "%AppData%\\Microsoft\\Templates",
+    "folderMac": "~/Library/Group Containers/UBF8T346G9.Office/User Content/Templates",
+    "copyFolder": "Salin lokasi folder",
+    "folderProvisional": "Verifikasi lokasi ini lewat uji manusia T0 sebelum rilis.",
+    "stepsTitle": "Langkah demi langkah",
+    "steps": {
+      "backup": {
+        "title": "Cadangkan Normal.dotm lama",
+        "body": "Buka folder Templates, ganti nama Normal.dotm yang ada menjadi Normal.backup.dotm, atau salin ke tempat aman."
+      },
+      "close": {
+        "title": "Tutup Word sepenuhnya",
+        "body": "Word menyimpan template di latar belakang. Keluar dari Word, termasuk dokumen yang masih terbuka."
+      },
+      "copy": {
+        "title": "Salin file hasil unduhan",
+        "body": "Unduh Normal.dotm dari halaman ringkasan, lalu pindahkan ke folder Templates."
+      },
+      "paste": {
+        "title": "Ganti file lama",
+        "body": "Konfirmasi penggantian saat sistem bertanya. Nama file harus tepat Normal.dotm."
+      },
+      "restart": {
+        "title": "Buka Word dan uji",
+        "body": "Jalankan Word dan coba salah satu shortcut Anda. Jika tidak berfungsi, periksa bagian pemecahan masalah di bawah."
+      }
+    },
+    "unblockTitle": "Buka blokir file unduhan (Windows)",
+    "unblockBody": "Windows dapat menandai file unduhan sebagai tidak aman. Klik kanan Normal.dotm, pilih Properties, centang Unblock di bagian bawah, lalu klik OK. Di macOS, hapus tanda karantina jika Word menolak memuat file.",
+    "troubleTitle": "Pemecahan masalah",
+    "troubleItems": {
+      "blocked": "Shortcut tidak bereaksi: pastikan file tidak terblokir dan namanya tepat Normal.dotm.",
+      "wordOpen": "Word sedang berjalan saat pemasangan: tutup Word sepenuhnya lalu salin file lagi.",
+      "otherCopy": "Salinan lain menang: cari file Normal.dotm lain di komputer dan simpan hanya yang ada di folder Templates.",
+      "onedrive": "Profil yang disinkronkan ke cloud atau dialihkan mungkin memakai folder Templates berbeda. Buka File > Options > Advanced > File Locations untuk melihat lokasi sebenarnya.",
+      "macPath": "Di macOS folder Templates berbeda antar versi Word. Gunakan Word > Preferences > File Locations untuk memastikannya."
+    },
+    "warningTitle": "Simpan cadangan",
+    "warningBody": "Mengganti Normal.dotm mengatur ulang style kustom, AutoText, dan macro yang tersimpan di dalamnya. Selalu simpan cadangan sampai file baru teruji."
+  },
+  "errors": {
+    "unknownVersion": "Konfigurasi ini dibuat oleh versi situs yang lebih baru. Versinya tidak didukung.",
+    "invalidConfig": "File ini bukan konfigurasi shortcut yang valid.",
+    "invalidJson": "File ini bukan JSON yang valid.",
+    "fixturesRequired": "Pembuatan file belum tersedia sampai fixture Word dipasang.",
+    "unresolved": "Selesaikan konflik yang tersisa sebelum membuat file.",
+    "generationFailed": "File tidak dapat dibuat. Konfigurasi Anda tetap utuh.",
+    "fileRead": "File tidak dapat dibaca.",
+    "missingTargets": "Beberapa shortcut merujuk perintah yang tidak ada di katalog."
+  },
+  "keyboard": {
+    "legend": "Tombol yang disorot dipakai oleh setidaknya satu shortcut.",
+    "used": "Terpakai",
+    "unused": "Tidak terpakai"
+  },
+  "footer": {
+    "privacy": "Seluruh pemrosesan tetap di browser Anda.",
+    "noServer": "Tanpa unggahan. Tanpa akun. Tanpa macro."
+  }
+}

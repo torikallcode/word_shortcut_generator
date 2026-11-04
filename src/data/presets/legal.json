@@ -1,0 +1,25 @@
+{
+  "id": "legal",
+  "name": {
+    "id": "Dokumen hukum",
+    "en": "Legal documents"
+  },
+  "description": {
+    "id": "Judul, paragraf daftar, dan tabel untuk dokumen hukum.",
+    "en": "Headings, list paragraphs, and tables for legal documents."
+  },
+  "bindings": [
+    {
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "Digit1" },
+      "target": { "kind": "style", "styleId": "heading-1" }
+    },
+    {
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "KeyL" },
+      "target": { "kind": "style", "styleId": "list-paragraph" }
+    },
+    {
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "KeyT" },
+      "target": { "kind": "command", "commandId": "insert-table" }
+    }
+  ]
+}

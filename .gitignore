@@ -1,0 +1,13 @@
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+fixtures/generated/
+tools/**/bin/
+tools/**/obj/
+*.local
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+*.log

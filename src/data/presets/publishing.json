@@ -1,0 +1,25 @@
+{
+  "id": "publishing",
+  "name": {
+    "id": "Penerbitan",
+    "en": "Publishing"
+  },
+  "description": {
+    "id": "Tebal, hyperlink, dan judul untuk penyuntingan naskah.",
+    "en": "Bold, hyperlinks, and headings for manuscript editing."
+  },
+  "bindings": [
+    {
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "KeyB" },
+      "target": { "kind": "command", "commandId": "bold" }
+    },
+    {
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "KeyK" },
+      "target": { "kind": "command", "commandId": "insert-hyperlink" }
+    },
+    {
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "Digit1" },
+      "target": { "kind": "style", "styleId": "heading-1" }
+    }
+  ]
+}

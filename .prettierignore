@@ -1,0 +1,10 @@
+node_modules
+dist
+.commandcode
+coverage
+playwright-report
+test-results
+pnpm-lock.yaml
+PRD Word Shortcut Builder (Generator Normal.dotm).md
+fixtures/
+src/data/base-package/

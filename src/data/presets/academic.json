@@ -1,0 +1,29 @@
+{
+  "id": "academic",
+  "name": {
+    "id": "Penulisan akademik",
+    "en": "Academic writing"
+  },
+  "description": {
+    "id": "Heading, tebal, dan daftar untuk skripsi atau jurnal.",
+    "en": "Headings, bold, and lists for theses or journal articles."
+  },
+  "bindings": [
+    {
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "Digit1" },
+      "target": { "kind": "style", "styleId": "heading-1" }
+    },
+    {
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "Digit2" },
+      "target": { "kind": "style", "styleId": "heading-2" }
+    },
+    {
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "Digit3" },
+      "target": { "kind": "style", "styleId": "heading-3" }
+    },
+    {
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "KeyB" },
+      "target": { "kind": "command", "commandId": "bold" }
+    }
+  ]
+}
