@@ -52,14 +52,24 @@
   "home": {
     "badge": "Seluruh proses berjalan di browser Anda",
     "title": "Buat Normal.dotm dengan shortcut Word versi Anda",
-    "subtitle": "Pilih perintah, tekan kombinasi tombol, lalu unduh template yang siap dipakai. Tanpa server, tanpa akun, tanpa macro.",
+    "subtitle": "Pilih perintah, tekan kombinasi tombol, lalu unduh template yang siap dipakai. Tanpa server, tanpa akun. Macro hanya jika Anda memilih preset skripsi.",
     "startEmptyTitle": "Mulai dari kosong",
     "startEmptyBody": "Buka editor dengan daftar shortcut kosong.",
     "startEmptyAction": "Mulai kosong",
     "presetTitle": "Pakai preset",
-    "presetBody": "Mulai dari kumpulan siap pakai untuk penulisan akademik, penerbitan, atau dokumen hukum.",
+    "presetBody": "Mulai dari kumpulan siap pakai untuk skripsi, akademik, penerbitan, atau dokumen hukum.",
     "presetAction": "Terapkan preset",
     "presetEmpty": "Preset ini belum berisi shortcut. Data preset diisi dari katalog perintah T4.",
+    "presetReady": "{{count}} shortcut siap diekspor",
+    "presetOverwriteNote": "Heading 1–3 akan menimpa shortcut bawaan Word. Preset menandainya sebagai Timpa.",
+    "plannedTitle": "{{count}} item menunggu dukungan",
+    "plannedHint": "Item ini ditampilkan untuk transparansi dan belum diekspor.",
+    "readiness": {
+      "ready": "Siap",
+      "needs-fixture": "Perlu fixture",
+      "needs-macro": "Perlu macro",
+      "needs-setup": "Perlu setup"
+    },
     "loadTitle": "Muat konfigurasi",
     "loadBody": "Lanjutkan dari file JSON yang Anda simpan sebelumnya.",
     "loadAction": "Muat JSON",
@@ -228,6 +238,6 @@
   },
   "footer": {
     "privacy": "Seluruh pemrosesan tetap di browser Anda.",
-    "noServer": "Tanpa unggahan. Tanpa akun. Tanpa macro."
+    "noServer": "Tanpa unggahan. Tanpa akun. Macro hanya jika Anda memilihnya."
   }
 }

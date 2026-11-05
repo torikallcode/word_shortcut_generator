@@ -17,6 +17,32 @@ For the next increment, provide:
 
 1. A macOS pair with the same five shortcuts.
 2. More command names (`wne:fciName`) for the PRD's ~100-command catalog target.
+3. **T0b macro fixture** for the 25-item Skripsi preset (see below).
+
+## T0b — Macro and style fixture (Skripsi preset)
+
+The 15 non-style items need a Word-created macro project; the agent cannot build a valid
+`vbaProject.bin`. Use `macros/SkripsiShortcuts.bas` and follow `macros/README.md`.
+
+Put the result under:
+
+```text
+fixtures/win/2021b/
+  before/Normal.dotm          # macro-free template before changes
+  after/Normal.dotm           # macro project + 3 representative macro shortcuts
+  SkripsiShortcuts.bas        # exported module
+  sample-styles.docx          # custom styles/numbering/caption/roman-arabic sample
+  notes.md                    # Word build + steps + shortcuts assigned
+```
+
+Minimum representative shortcuts to bind:
+
+- `SkripsiDaftarIsi` → `Ctrl+Alt+Shift+T`
+- `SkripsiCaptionGambar2` → `Ctrl+Alt+Shift+H`
+- `SkripsiNomorRomawi` → `Ctrl+Alt+Shift+R`
+
+That is enough to learn how Word encodes macro targets and how it stores custom
+styles/numbering. The remaining 22 items reuse the same pattern.
 
 ## Minimum required set
 

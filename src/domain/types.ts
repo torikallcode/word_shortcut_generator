@@ -62,11 +62,31 @@ export interface Config {
   bindings: ShortcutBinding[];
 }
 
+export type PresetReadiness = 'ready' | 'needs-fixture' | 'needs-macro' | 'needs-setup';
+
+export type PresetGroup = 'heading' | 'caption' | 'list' | 'page' | 'format';
+
+export interface PresetBinding {
+  combo: KeyCombo;
+  target: Target;
+  overwriteDefault?: boolean;
+}
+
+export interface PresetPlannedItem {
+  id: string;
+  group: PresetGroup;
+  name: LocalizedText;
+  combo: KeyCombo;
+  readiness: PresetReadiness;
+  note?: LocalizedText;
+}
+
 export interface Preset {
   id: string;
   name: LocalizedText;
   description: LocalizedText;
-  bindings: Array<{ combo: KeyCombo; target: Target }>;
+  bindings: PresetBinding[];
+  planned?: PresetPlannedItem[];
 }
 
 export interface BrowserBlockedCombo {

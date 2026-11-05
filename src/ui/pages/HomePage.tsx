@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { commandCatalog, presets, styleCatalog } from '@/data/catalog';
 import { parseConfig } from '@/domain/config';
+import type { PresetReadiness } from '@/domain/types';
 import { useAppStore } from '@/store/useAppStore';
 import { errorMessageKey } from '@/ui/lib/errorMessage';
 import { localize } from '@/ui/lib/localize';
@@ -12,18 +13,30 @@ interface Notice {
   message: string;
 }
 
+const READINESS_BADGE: Record<PresetReadiness, string> = {
+  ready: 'border-emerald-200 bg-emerald-50 text-emerald-700',
+  'needs-fixture': 'border-amber-200 bg-amber-50 text-amber-800',
+  'needs-macro': 'border-sky-200 bg-sky-50 text-sky-800',
+  'needs-setup': 'border-ink-100 bg-ink-50 text-ink-500',
+};
+
 export function HomePage() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const language = useAppStore((state) => state.language);
   const reset = useAppStore((state) => state.reset);
   const addBinding = useAppStore((state) => state.addBinding);
+  const overrideBinding = useAppStore((state) => state.overrideBinding);
   const replaceConfig = useAppStore((state) => state.replaceConfig);
   const fileInput = useRef<HTMLInputElement>(null);
   const [presetId, setPresetId] = useState(presets[0]?.id ?? '');
   const [notice, setNotice] = useState<Notice | null>(null);
 
   const selectedPreset = presets.find((preset) => preset.id === presetId);
+  const readyCount = selectedPreset?.bindings.length ?? 0;
+  const plannedItems = selectedPreset?.planned ?? [];
+  const overwritesDefaults =
+    selectedPreset?.bindings.some((binding) => binding.overwriteDefault === true) ?? false;
 
   function startEmpty() {
     reset();
@@ -36,7 +49,10 @@ export function HomePage() {
     }
     reset();
     for (const binding of selectedPreset.bindings) {
-      addBinding(binding.target, binding.combo);
+      const id = addBinding(binding.target, binding.combo);
+      if (binding.overwriteDefault) {
+        overrideBinding(id);
+      }
     }
     navigate('/editor');
   }
@@ -119,9 +135,43 @@ export function HomePage() {
             ))}
           </select>
           {selectedPreset ? (
-            <p className="mt-2 text-xs text-ink-500">
-              {localize(selectedPreset.description, language)}
-            </p>
+            <>
+              <p className="mt-2 text-xs text-ink-500">
+                {localize(selectedPreset.description, language)}
+              </p>
+              {readyCount > 0 ? (
+                <p className="mt-2 text-xs font-medium text-emerald-700">
+                  {t('home.presetReady', { count: readyCount })}
+                </p>
+              ) : null}
+              {overwritesDefaults ? (
+                <p className="mt-1 rounded-md bg-amber-50 px-2 py-1 text-xs text-amber-700">
+                  {t('home.presetOverwriteNote')}
+                </p>
+              ) : null}
+              {plannedItems.length > 0 ? (
+                <details className="mt-2 rounded-md border border-ink-100 p-2">
+                  <summary className="cursor-pointer text-xs font-semibold text-ink-700">
+                    {t('home.plannedTitle', { count: plannedItems.length })}
+                  </summary>
+                  <p className="mt-1 text-xs text-ink-500">{t('home.plannedHint')}</p>
+                  <ul className="mt-2 max-h-44 space-y-1 overflow-y-auto pr-1">
+                    {plannedItems.map((item) => (
+                      <li key={item.id} className="flex items-start justify-between gap-2 text-xs">
+                        <span className="min-w-0 flex-1">{localize(item.name, language)}</span>
+                        <span
+                          className={`shrink-0 rounded-full border px-1.5 py-0.5 text-[10px] font-semibold ${
+                            READINESS_BADGE[item.readiness]
+                          }`}
+                        >
+                          {t(`home.readiness.${item.readiness}`)}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              ) : null}
+            </>
           ) : null}
           {selectedPreset && selectedPreset.bindings.length === 0 ? (
             <p className="mt-2 rounded-md bg-amber-50 px-2 py-1 text-xs text-amber-700">

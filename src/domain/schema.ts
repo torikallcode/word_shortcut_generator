@@ -65,16 +65,36 @@ export const defaultShortcutSchema = z.object({
   platforms: z.array(platformSchema).min(1),
 });
 
+export const presetReadinessSchema = z.enum([
+  'ready',
+  'needs-fixture',
+  'needs-macro',
+  'needs-setup',
+]);
+
+export const presetGroupSchema = z.enum(['heading', 'caption', 'list', 'page', 'format']);
+
+export const presetBindingSchema = z.object({
+  combo: keyComboSchema,
+  target: targetSchema,
+  overwriteDefault: z.boolean().optional(),
+});
+
+export const presetPlannedItemSchema = z.object({
+  id: z.string().min(1),
+  group: presetGroupSchema,
+  name: localizedTextSchema,
+  combo: keyComboSchema,
+  readiness: presetReadinessSchema,
+  note: localizedTextSchema.optional(),
+});
+
 export const presetSchema = z.object({
   id: z.string().min(1),
   name: localizedTextSchema,
   description: localizedTextSchema,
-  bindings: z.array(
-    z.object({
-      combo: keyComboSchema,
-      target: targetSchema,
-    }),
-  ),
+  bindings: z.array(presetBindingSchema),
+  planned: z.array(presetPlannedItemSchema).optional(),
 });
 
 export const browserBlockedComboSchema = z.object({

@@ -1,0 +1,232 @@
+{
+  "id": "skripsi",
+  "name": {
+    "id": "Skripsi / Akademik",
+    "en": "Thesis / Academic"
+  },
+  "description": {
+    "id": "25 shortcut untuk penulisan skripsi: BAB, sub-BAB, caption, daftar, halaman, dan format.",
+    "en": "25 shortcuts for thesis writing: chapters, sub-chapters, captions, lists, pages, and formatting."
+  },
+  "bindings": [
+    {
+      "combo": { "modifiers": ["ctrl", "alt"], "key": "Digit0" },
+      "target": { "kind": "style", "styleId": "normal" }
+    },
+    {
+      "combo": { "modifiers": ["ctrl", "alt"], "key": "Digit1" },
+      "target": { "kind": "style", "styleId": "heading-1" },
+      "overwriteDefault": true
+    },
+    {
+      "combo": { "modifiers": ["ctrl", "alt"], "key": "Digit2" },
+      "target": { "kind": "style", "styleId": "heading-2" },
+      "overwriteDefault": true
+    },
+    {
+      "combo": { "modifiers": ["ctrl", "alt"], "key": "Digit3" },
+      "target": { "kind": "style", "styleId": "heading-3" },
+      "overwriteDefault": true
+    },
+    {
+      "combo": { "modifiers": ["ctrl", "alt"], "key": "Digit4" },
+      "target": { "kind": "style", "styleId": "heading-4" },
+      "overwriteDefault": true
+    },
+    {
+      "combo": { "modifiers": ["ctrl", "alt"], "key": "Digit5" },
+      "target": { "kind": "style", "styleId": "heading-5" },
+      "overwriteDefault": true
+    },
+    {
+      "combo": { "modifiers": ["ctrl", "alt"], "key": "Digit6" },
+      "target": { "kind": "style", "styleId": "heading-6" },
+      "overwriteDefault": true
+    },
+    {
+      "combo": { "modifiers": ["ctrl", "alt"], "key": "Digit7" },
+      "target": { "kind": "style", "styleId": "heading-7" },
+      "overwriteDefault": true
+    },
+    {
+      "combo": { "modifiers": ["ctrl", "alt"], "key": "Digit8" },
+      "target": { "kind": "style", "styleId": "heading-8" },
+      "overwriteDefault": true
+    },
+    {
+      "combo": { "modifiers": ["ctrl", "alt"], "key": "Digit9" },
+      "target": { "kind": "style", "styleId": "heading-9" },
+      "overwriteDefault": true
+    }
+  ],
+  "planned": [
+    {
+      "id": "non-bab",
+      "group": "heading",
+      "name": { "id": "Selevel BAB / Non-BAB", "en": "Chapter-level / Non-chapter" },
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "Digit0" },
+      "readiness": "needs-macro",
+      "note": {
+        "id": "Memerlukan style Non-BAB dan proyek macro T0b.",
+        "en": "Requires the Non-BAB style and the T0b macro project."
+      }
+    },
+    {
+      "id": "daftar-isi",
+      "group": "list",
+      "name": { "id": "Daftar isi otomatis", "en": "Automatic table of contents" },
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "KeyT" },
+      "readiness": "needs-macro",
+      "note": {
+        "id": "Memerlukan macro daftar isi dari fixture T0b.",
+        "en": "Requires the TOC macro from the T0b fixture."
+      }
+    },
+    {
+      "id": "caption-gambar-1",
+      "group": "caption",
+      "name": { "id": "Caption Gambar 1 digit", "en": "Figure caption (1 digit)" },
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "KeyG" },
+      "readiness": "needs-macro",
+      "note": {
+        "id": "Memerlukan macro caption Gambar 1 digit.",
+        "en": "Requires the 1-digit figure caption macro."
+      }
+    },
+    {
+      "id": "caption-gambar-2",
+      "group": "caption",
+      "name": { "id": "Caption Gambar 2 digit (X.Y)", "en": "Figure caption (2 digits, X.Y)" },
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "KeyH" },
+      "readiness": "needs-macro",
+      "note": {
+        "id": "Memerlukan macro caption Gambar dengan angka bab Heading 1.",
+        "en": "Requires the figure caption macro using the Heading 1 chapter number."
+      }
+    },
+    {
+      "id": "daftar-gambar",
+      "group": "list",
+      "name": { "id": "Daftar Gambar", "en": "List of figures" },
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "KeyL" },
+      "readiness": "needs-macro",
+      "note": {
+        "id": "Memerlukan macro daftar gambar.",
+        "en": "Requires the list of figures macro."
+      }
+    },
+    {
+      "id": "caption-tabel-1",
+      "group": "caption",
+      "name": { "id": "Caption Tabel 1 digit", "en": "Table caption (1 digit)" },
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "KeyJ" },
+      "readiness": "needs-macro",
+      "note": {
+        "id": "Memerlukan macro caption Tabel 1 digit.",
+        "en": "Requires the 1-digit table caption macro."
+      }
+    },
+    {
+      "id": "caption-tabel-2",
+      "group": "caption",
+      "name": { "id": "Caption Tabel 2 digit (X.Y)", "en": "Table caption (2 digits, X.Y)" },
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "KeyK" },
+      "readiness": "needs-macro",
+      "note": {
+        "id": "Memerlukan macro caption Tabel dengan angka bab Heading 1.",
+        "en": "Requires the table caption macro using the Heading 1 chapter number."
+      }
+    },
+    {
+      "id": "daftar-tabel",
+      "group": "list",
+      "name": { "id": "Daftar Tabel", "en": "List of tables" },
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "KeyU" },
+      "readiness": "needs-macro",
+      "note": {
+        "id": "Memerlukan macro daftar tabel.",
+        "en": "Requires the list of tables macro."
+      }
+    },
+    {
+      "id": "caption-lampiran-1",
+      "group": "caption",
+      "name": { "id": "Caption Lampiran 1 digit", "en": "Appendix caption (1 digit)" },
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "KeyM" },
+      "readiness": "needs-macro",
+      "note": {
+        "id": "Memerlukan macro caption Lampiran 1 digit.",
+        "en": "Requires the 1-digit appendix caption macro."
+      }
+    },
+    {
+      "id": "caption-lampiran-2",
+      "group": "caption",
+      "name": {
+        "id": "Caption Lampiran 2 digit (X.Y)",
+        "en": "Appendix caption (2 digits, X.Y)"
+      },
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "KeyP" },
+      "readiness": "needs-macro",
+      "note": {
+        "id": "Memerlukan macro caption Lampiran dengan angka bab Heading 1.",
+        "en": "Requires the appendix caption macro using the Heading 1 chapter number."
+      }
+    },
+    {
+      "id": "daftar-lampiran",
+      "group": "list",
+      "name": { "id": "Daftar Lampiran", "en": "List of appendices" },
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "KeyO" },
+      "readiness": "needs-macro",
+      "note": {
+        "id": "Memerlukan macro daftar lampiran.",
+        "en": "Requires the list of appendices macro."
+      }
+    },
+    {
+      "id": "halaman-otomatis",
+      "group": "page",
+      "name": { "id": "Halaman otomatis", "en": "Automatic page number" },
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "KeyF" },
+      "readiness": "needs-macro",
+      "note": {
+        "id": "Memerlukan macro halaman otomatis.",
+        "en": "Requires the automatic page number macro."
+      }
+    },
+    {
+      "id": "nomor-romawi",
+      "group": "page",
+      "name": { "id": "Nomor Romawi", "en": "Roman numerals" },
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "KeyR" },
+      "readiness": "needs-macro",
+      "note": {
+        "id": "Memerlukan macro nomor romawi dan section break.",
+        "en": "Requires the roman numeral macro and a section break."
+      }
+    },
+    {
+      "id": "copy-format",
+      "group": "format",
+      "name": { "id": "Copy Format", "en": "Copy formatting" },
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "KeyC" },
+      "readiness": "needs-fixture",
+      "note": {
+        "id": "Perlu verifikasi nama perintah format painter.",
+        "en": "Needs the format painter command name verified."
+      }
+    },
+    {
+      "id": "paste-format",
+      "group": "format",
+      "name": { "id": "Paste Format", "en": "Paste formatting" },
+      "combo": { "modifiers": ["ctrl", "alt", "shift"], "key": "KeyV" },
+      "readiness": "needs-fixture",
+      "note": {
+        "id": "Perlu verifikasi nama perintah format painter.",
+        "en": "Needs the format painter command name verified."
+      }
+    }
+  ]
+}

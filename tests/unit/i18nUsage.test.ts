@@ -53,6 +53,9 @@ const DYNAMIC_KEYS = [
     (item) => `guide.troubleItems.${item}`,
   ),
   ...['ctrl', 'alt', 'shift', 'cmd'].map((modifier) => `shortcut.modifiers.${modifier}`),
+  ...['ready', 'needs-fixture', 'needs-macro', 'needs-setup'].map(
+    (readiness) => `home.readiness.${readiness}`,
+  ),
 ];
 
 describe('translation key usage', () => {

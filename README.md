@@ -1,7 +1,8 @@
 # Word Shortcut Builder
 
 A static web app that builds a `Normal.dotm` containing custom Microsoft Word keyboard
-shortcuts. All processing happens in the browser: no backend, no uploads, no macros.
+shortcuts. All processing happens in the browser: no backend and no uploads. The base build
+is shortcut-only; the opt-in Skripsi preset will add a macro project in Phase 2.
 
 This repository implements the PRD in `PRD Word Shortcut Builder (Generator Normal.dotm).md`.
 
@@ -23,8 +24,28 @@ Implemented:
 - Open XML SDK validation of the generated sample.
 - macOS configuration works, but `.dotm` generation is refused with an explanation because
   Command-key encoding is not verified.
+- **Skripsi preset Phase 1**: 25-item roadmap, 10 ready style shortcuts (Normal + Heading
+  1–9), automatic overwrite of `Ctrl+Alt+1–3`, readiness badges for the remaining 15 items.
 
-See `docs/ooxml-spec.md`, `docs/decisions.md`, and `docs/manual-test.md`.
+### Skripsi preset (25 items)
+
+The preset is designed for Indonesian thesis formatting. Phase 1 is usable now:
+
+| Group   | Ready                                              | Waiting                                                  |
+| ------- | -------------------------------------------------- | -------------------------------------------------------- |
+| Style   | Normal, Heading 1–9 (`Ctrl+Alt+0`, `Ctrl+Alt+1–9`) | Non-BAB                                                  |
+| Caption | —                                                  | Gambar/Tabel/Lampiran 1 digit and 2 digits               |
+| List    | —                                                  | Daftar Isi, Daftar Gambar, Daftar Tabel, Daftar Lampiran |
+| Page    | —                                                  | Halaman Otomatis, Nomor Romawi                           |
+| Format  | —                                                  | Copy Format, Paste Format                                |
+
+The 15 remaining items require the **T0b fixture**: a Word-created macro project
+(`vbaProject.bin`) plus custom styles/numbering. The agent cannot author the binary VBA
+project without Word. The VBA source is ready in `macros/SkripsiShortcuts.bas`; follow
+`macros/README.md`.
+
+See `docs/PRD-Preset-Skripsi-Akademik.md`, `docs/ooxml-spec.md`, `docs/decisions.md`, and
+`docs/manual-test.md`.
 
 ## Requirements
 
@@ -60,8 +81,10 @@ pnpm validate:ooxml
 ## Structure
 
 ```text
-fixtures/              T0 fixtures (win/2021 received; mac still needed)
-docs/                  ooxml-spec.md, decisions.md, manual-test.md
+fixtures/              T0 fixtures (win/2021 received; mac and T0b still needed)
+macros/                SkripsiShortcuts.bas for the T0b word-created macro project
+docs/                  ooxml-spec.md, decisions.md, manual-test.md,
+                       PRD-Preset-Skripsi-Akademik.md
 scripts/               fixture inspection, base-package/keycode generation, sample output
 tools/OpenXmlValidator Open XML SDK validator (.NET 9)
 src/
@@ -79,16 +102,19 @@ tests/
 
 ## Next step (human)
 
-Run the T4 checkpoint in `docs/manual-test.md`: copy `fixtures/generated/Normal.dotm` into
-Word 2021 and confirm all five shortcuts work without a repair dialog.
-
-Then provide:
-
-1. A macOS before/after pair with the same five shortcuts.
-2. More internal command names (`wne:fciName`) for the T4 catalog target of ~100 commands.
+1. Run the T4 checkpoint in `docs/manual-test.md`: copy `fixtures/generated/Normal.dotm` into
+   Word 2021 and confirm all five shortcuts work without a repair dialog.
+2. Provide a macOS before/after pair with the same five shortcuts.
+3. Create the **T0b macro fixture** using `macros/SkripsiShortcuts.bas` (see
+   `macros/README.md`): import the module, bind the three representative macros, save the
+   macro-enabled `Normal.dotm`, and include the custom styles/numbering sample.
+4. Provide more internal command names (`wne:fciName`) for the T4 catalog target of ~100
+   commands.
 
 ## Privacy
 
 No configuration or file content is sent anywhere. Language preference and shortcuts are
 stored in `localStorage` only. The fixture-derived base package was sanitized: the author's
-name and personal AutoText entries were removed before committing.
+name and personal AutoText entries were removed before committing. Phase 2 files will contain
+the macro project only after the user applies the Skripsi preset; the UI will label them as
+macro-enabled.

@@ -14,6 +14,7 @@ import keycodesRaw from './keycodes.json';
 import legalPreset from './presets/legal.json';
 import academicPreset from './presets/academic.json';
 import publishingPreset from './presets/publishing.json';
+import skripsiPreset from './presets/skripsi.json';
 import stylesRaw from './styles.json';
 
 /**
@@ -25,7 +26,12 @@ export const commandCatalog = commandCatalogSchema.parse(commandsRaw);
 export const styleCatalog = styleCatalogSchema.parse(stylesRaw);
 export const defaultShortcuts = defaultShortcutListSchema.parse(defaultsRaw);
 export const browserBlockedCombos = browserBlockedListSchema.parse(browserBlockedRaw);
-export const presets = presetListSchema.parse([academicPreset, publishingPreset, legalPreset]);
+export const presets = presetListSchema.parse([
+  skripsiPreset,
+  academicPreset,
+  publishingPreset,
+  legalPreset,
+]);
 export const keycodeTable: KeycodeTable = keycodeTableSchema.parse(keycodesRaw);
 
 export const catalogReady = commandCatalog.length > 0 || styleCatalog.length > 0;

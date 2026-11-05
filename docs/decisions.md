@@ -129,3 +129,26 @@ guess, so `buildNormalDotm` throws `FixturesRequiredError` for macOS until a Mac
 `pnpm sample:generate` writes `fixtures/generated/Normal.dotm` with the five shortcuts from
 `notes.md`. `fixtures/generated/` is gitignored. The file passes the Open XML SDK validator
 and is the artifact to open in Word for the T4 checkpoint. See `docs/manual-test.md`.
+
+## D017 — Skripsi preset scope locked (4 November 2026)
+
+The 25-item thesis preset is approved with these decisions (see
+`docs/PRD-Preset-Skripsi-Akademik.md` §0):
+
+- **One press, no dialogs.** Non-style actions use VBA macros, not assisted dialogs.
+- **Macros are allowed.** Phase 2 files are macro-enabled and must show a security warning.
+- **Custom styles and numbering are allowed.**
+- **Headings use `Ctrl+Alt+1–9`.** The preset marks the Word-default conflicts for
+  `Ctrl+Alt+1–3` as intentional overrides. Non-heading items use `Ctrl+Alt+Shift+…`.
+- **Caption chapter number comes from Heading 1.**
+- **Roman numerals for front matter, Arabic for the body**, using a section break.
+- **Indonesian caption labels**: Gambar, Tabel, Lampiran.
+- **Windows Word 2021 first**; macOS remains gated on a Mac fixture.
+
+Phase 1 ships 10 ready style bindings (Normal + Heading 1–9) plus the 25-item roadmap in the
+UI. The other 15 items are marked `needs-macro`/`needs-fixture` and are not exported.
+
+The agent cannot author a valid `vbaProject.bin` without Word. T0b must contain a
+Word-created macro project, three representative macro bindings, and the custom
+styles/numbering sample. The VBA source is in `macros/SkripsiShortcuts.bas`; instructions are
+in `macros/README.md`.
